@@ -1,0 +1,1569 @@
+@import url("https://use.typekit.net/qym4bov.css");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Playfair+Display&family=Ubuntu:wght@300&display=swap');
+
+:root {
+    --ff-heading1: "Finger Paint", sans-serif;
+    --ff-regular: "Ubuntu", sans-serif;
+    --ff-caveat: 'Caveat', cursive;
+    --ff-heading2: 'p22-flw-exhibition', sans-serif;
+}
+
+/** CSS reset **/
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+table,
+tr,
+td,
+th,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+main {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+/** CSS reset end **/
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: 1rem "Finger Paint", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+body:selection {
+    color: gold;
+}
+
+main {
+    max-width: 100vw;
+    margin-top: 12rem;
+}
+
+body.index {
+    background:
+        url('/images/background-frontpage.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.95);
+    background-blend-mode: darken;
+}
+
+body.all-posts {
+    background:
+        url('/images/The-Midnight-Mango-of-Morocco2.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.95);
+    background-blend-mode: darken;
+}
+
+body.blog-post-body {
+    background:
+        url('/images/The_Ghost_Mangos_of_Bermuda4.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.95);
+    background-blend-mode: darken;
+}
+
+body.about-body {
+    background:
+        url('/images/background_mango_quest.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: darken;
+}
+
+body.contact-body {
+    background:
+        url('/images/mango_quest_back.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: darken;
+}
+
+.section-middle-index {
+    margin-block: 2vh;
+}
+
+header {
+    width: 100vw;
+    background: linear-gradient(to bottom, #242424 0%, #242424 70%, transparent 60%, transparent 100%);
+    position: fixed;
+    z-index: 1000;
+}
+
+.navigation-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 13.08rem;
+}
+
+.navlink-li {
+    align-self: center;
+    color: #ffffff;
+    font: 400 1.25rem var(--ff-heading1);
+    list-style: none;
+    margin: 0 1rem 0 1rem;
+}
+
+.navlink-li-about {
+    margin-right: 0;
+}
+
+
+.navlink-li-allposts {
+    margin-left: 0;
+}
+
+.navlink-li a {
+    color: white;
+}
+
+.nav-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-sr {
+    display: none;
+}
+
+.nav-group-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+    position: relative;
+}
+
+.logo-images a {
+    line-height: 0;
+}
+
+.mango-logo {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0.625rem;
+}
+
+.mango-title {
+    width: 12rem;
+    background: #242424;
+    align-self: flex-end;
+    border-radius: 0rem 0rem 0.625rem 0.625rem;
+    padding: 1.2rem;
+    padding-top: 1.5vh;
+}
+
+.logo-text-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.home a {
+    color: #F8CE58;
+    text-decoration: none;
+    text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(255, 255, 255, 0.333);
+}
+
+.home {
+    transform: scale(1.21);
+}
+
+.navlink-li:hover {
+    transform: scale(1.2);
+    text-shadow: 0.0625rem 0.0625rem 0.125rem black;
+    box-shadow: 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.index .home:hover {
+    animation: swing 0.5s ease-in-out;
+}
+
+
+/** mobile-menu css code **/
+
+.mobile-menu,
+.mobile-menu * {
+    box-sizing: border-box;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #242424;
+    border-style: solid;
+    border-color: #f8ce58;
+    border-bottom: solid white;
+}
+
+.mobile-menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.125rem;
+    padding-top: 1.5rem;
+}
+
+.menu-item,
+.menu-text {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu-item {
+    text-align: center;
+    margin: 1.25rem 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 36%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    padding: 3.125rem;
+    z-index: 1000;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+/** index.html , style for main quest in the middle of index.html **/
+
+.main-mangoquest,
+.main-mangoquest * {
+    box-sizing: border-box;
+}
+
+.main-mangoquest {
+    box-sizing: border-box;
+    max-width: 90rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.heading-and-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 37rem;
+    width: 95%;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease, filter 1s ease;
+    box-shadow: 0 0 1.25rem rgba(255, 166, 2, 0.4);
+    border: outset rgba(255, 255, 255, 0.257);
+    border-radius: 0.3rem;
+}
+
+.heading-introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #201e1d;
+    border-style: solid;
+    border-color: #ffa702;
+    max-height: 100%;
+    max-width: 33rem;
+    width: 85%;
+    position: relative;
+    transition: left 0.5s ease;
+    z-index: 1;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 1.25rem rgba(255, 166, 2, 0.4);
+    border: outset rgba(255, 255, 255, 0.257);
+    transform: translateX(-2%);
+}
+
+.previous-adventure-image {
+    overflow: hidden;
+    width: 100%;
+    z-index: -2;
+}
+
+.heading-and-image:hover+.heading-introduction {
+    filter: brightness(1.3);
+    box-shadow: 0 0 2.5rem rgba(255, 166, 2, 1);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+.heading-and-image:hover {
+    filter: brightness(1.3);
+    box-shadow: 0 0 2.5rem rgba(255, 166, 2, 1);
+    transition: box-shadow 0.5s ease, filter 1s ease;
+}
+
+.heading-image {
+    display: flex;
+    justify-content: center;
+    background: #201e1d;
+    gap: 0.625rem;
+    width: 100%;
+    height: fit-content;
+    padding: 2%;
+}
+
+.previous-mango-quest-text {
+    color: #ffffff;
+    text-align: left;
+    font: 400 1.3125rem var(--ff-heading1);
+    width: fit-content;
+    color: gold;
+}
+
+@keyframes bounceDown {
+    0% {
+        top: 0rem;
+    }
+
+    50% {
+        top: -3.5rem;
+    }
+
+    75% {
+        top: -2.6rem;
+    }
+
+    100% {
+        top: -3rem;
+    }
+
+}
+
+
+@keyframes bounceRight {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -3.5rem;
+    }
+
+    75% {
+        left: -2.6rem;
+    }
+
+    100% {
+        left: -3rem;
+    }
+}
+
+.heading-bermuda {
+    padding: 2%;
+    margin-top: 2%;
+    max-width: 29.9375rem;
+    width: 95%;
+    color: #ffffff;
+    font: 400 1.3125rem var(--ff-heading1);
+    text-align: center;
+    color: gold;
+}
+
+
+.previous-mango-quest-text2 {
+    margin-top: 0.625rem;
+    color: #ffffff;
+    font: 400 1.25rem/1.6 var(--ff-regular);
+    padding: 3% 15% 15% 15%;
+}
+
+/** index.html carousel css **/
+
+.carousel-container,
+.carousel-container * {
+    box-sizing: border-box;
+}
+
+.h2-index {
+    color: #FFF;
+    font-family: var(--ff-heading2);
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2%;
+    width: fit-content;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(36, 36, 36, 0.75);
+    width: 88rem;
+    max-width: 95%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem;
+    border: outset rgba(255, 255, 255, 0.257);
+}
+
+.carousel-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(26%, 1fr));
+    width: 70%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 0.125rem solid #FFA702;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.carousel-item img {
+    width: 100%;
+    z-index: 1;
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .description {
+    opacity: 1;
+}
+
+.carousel-arrows {
+    background: #000000;
+    border-radius: 0.4375rem;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0.0625rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4.1875rem;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: rotate(180deg) scale(1, 1);
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow img {
+    max-width: 5rem;
+    max-height: 5rem;
+    cursor: pointer;
+}
+
+.right-arrow img {
+    transform: rotate(-90deg);
+}
+
+.left-arrow img {
+    transform: rotate(90deg);
+}
+
+.description-styled {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0%, rgba(0, 0, 0, 0.383) 100%), rgba(211, 211, 211, 0.32) 50% / cover no-repeat;
+    color: #FFF;
+    text-align: center;
+    font: 400 1.5rem var(--ff-heading1);
+    line-height: normal;
+    cursor: pointer;
+    padding: 0.625rem;
+    flex-shrink: 0;
+    gap: 0.625rem;
+    transition: background 0.3s ease, text-stroke 0.3s ease;
+    -webkit-text-stroke: 0.0313rem gold;
+    text-stroke: 0.0313rem gold;
+}
+
+.description-styled:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%), rgba(211, 211, 211, 0.32) 50% / cover no-repeat;
+    -webkit-text-stroke: 0.0313rem gold;
+    text-stroke: 0.0313rem gold;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/** Loader **/
+
+.loader {
+    flex-direction: column;
+    border: 1rem solid #f3f3f3;
+    border-top: 1rem solid #F8CE58;
+    border-radius: 50%;
+    width: 7.5rem;
+    height: 7.5rem;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+.loading-text {
+    text-align: center;
+    font: 1.2rem var(--ff-heading1);
+    color: #ffffff;
+    margin-top: 0.625rem;
+    display: none;
+    padding-bottom: 0.5rem;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/** loader end **/
+
+
+/** footer code **/
+
+.site-footer,
+.site-footer * {
+    box-sizing: border-box;
+}
+
+.site-footer {
+    background: #242424;
+    padding: 1.25rem 0;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    margin-top: 4vh;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.625rem;
+    text-align: center;
+}
+
+.adventures-button {
+    background: #fece3a;
+    border-radius: 0.625rem;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
+
+.see-all-link {
+    color: #000000;
+    text-decoration: none;
+    font: 400 1rem var(--ff-heading1);
+}
+
+.copyright {
+    font: 400 1.125rem var(--ff-regular);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.social-icons a i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.socialmedia-p {
+    display: none;
+}
+
+.follow-us-text {
+    font: 400 1.125rem var(--ff-regular);
+    margin-right: 0.625rem;
+    padding-bottom: 2%;
+}
+
+/** about.html css code **/
+
+.about-section {
+    background: rgba(28, 28, 27, 0.85);
+    border: 0.1rem solid #d58131;
+    max-width: 60rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-inside-photo {
+    box-sizing: border-box;
+    background: #000000;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    max-width: 37.125rem;
+    height: auto;
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.about-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside-photo {
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 37.125rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+.text-content-about {
+    color: #ffffff;
+    text-align: left;
+    font: 400 1.125rem/1.6 var(--ff-regular);
+    width: 95%;
+    max-width: 40rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-content p {
+    margin: 0 0 1.25rem 0;
+}
+
+/** about.html adventurers-section css code **/
+
+.adventurer-section,
+.adventurer-section * {
+    box-sizing: border-box;
+}
+
+.adventurer-section {
+    margin: 0 auto;
+    background: rgba(28, 28, 27, 0.76);
+    border: 0.1rem solid #d48032;
+    max-width: 60rem;
+    width: 90%;
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.header-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    max-width: 33.438rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.header-image-team {
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.adventurer-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 57.188rem;
+}
+
+.adventurer-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.adventurer-image {
+    border: 0.063rem solid #ffffff;
+    flex-shrink: 0;
+    max-width: 25rem;
+    width: 95%;
+}
+
+.adventurer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3%;
+    width: fit-content;
+    height: fit-content;
+}
+
+.adventurer-title {
+    color: #ffffff;
+    font-size: 1.875rem;
+    font-family: var(--ff-regular) align-self: center;
+    text-align: center;
+}
+
+.adventurer-bio {
+    color: #ffffff;
+    font: 400 1.125rem/1.6 var(--ff-regular);
+    width: 95%;
+    max-width: 40rem;
+    margin-bottom: 1vh;
+    text-align: left;
+    align-self: center;
+}
+
+/** contact.html css code **/
+
+
+.mango-quest-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    background: rgba(28, 28, 27, 0.76);
+    border: 0.3rem solid #d58131;
+    max-width: 56.25rem;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.mango-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.mango-team-h1,
+.about-h1,
+.team-h2 {
+    text-align: center;
+    color: #ffffff;
+    text-align: center;
+    font: 400 2rem var(--ff-heading2);
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.mango-description {
+    color: #ffffff;
+    text-align: left;
+    font: 400 1.125rem/1.6 var(--ff-regular);
+    width: 70%;
+}
+
+.contact-h2 {
+    color: #FFF;
+    text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    font: 400 1.5rem var(--ff-heading1);
+    line-height: normal;
+}
+
+.contact-form-section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font: 400 1.125rem var(--ff-regular);
+    position: relative;
+}
+
+.form-label {
+    color: #ffffff;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+.input-box,
+.message-box {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.67);
+    background-color: #ffffff;
+    font-size: 0.875rem;
+    color: #000;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.submit-button {
+    align-self: flex-start;
+    font: 400 1.125rem var(--ff-regular);
+    background: #d58131;
+    color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #000;
+    background: #FFF;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.message-box {
+    height: 15rem;
+}
+
+#success-message {
+    display: none;
+    font: 400 1.125rem var(--ff-regular);
+    align-self: center;
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+    z-index: 100;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+/** allposts.html css styling **/
+.allposts-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allposts-title {
+    color: #FFF;
+    text-align: center;
+    font: 400 2.5rem var(--ff-heading2);
+    font-weight: bold;
+    padding: 0 1rem 1rem 1rem;
+}
+
+
+.post-container,
+.post-container * {
+    box-sizing: border-box;
+}
+
+.section-allposts {
+    max-width: 60rem;
+    width: 100%;
+    display: flex;
+}
+
+.posts-wrapper {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.single-post {
+    background: #ffffff;
+    border: 0.1875rem solid #dc7f00;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(50% - 2%);
+    max-width: 22rem;
+    margin: 2%;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+    max-height: 29.5625rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.single-post:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    filter: brightness(1.1);
+}
+
+.post-date,
+.post-title {
+    color: #000000;
+    text-align: center;
+    font: 400 1.125rem var(--ff-regular);
+    padding: 0.5rem;
+}
+
+.post-title {
+    padding-bottom: 1rem;
+    font: 400 1.125rem var(--ff-heading1);
+}
+
+.button-load-more,
+.button-load-more * {
+    box-sizing: border-box;
+}
+
+.button-load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0b62b;
+    border-radius: 0.625rem;
+    width: 100%;
+    max-width: 13.5625rem;
+    height: auto;
+    padding: 0.9375rem;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+.load-more {
+    color: #000000;
+    text-align: center;
+    font: 400 1.25rem "Finger Paint", sans-serif;
+}
+
+.filter-box {
+    background: #ffffff;
+    max-width: 20rem;
+    width: 95%;
+    max-height: fit-content;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+    position: sticky;
+}
+
+.filter-content {
+    display: none;
+    flex-direction: row;
+    gap: 0.6875rem;
+    align-items: center;
+    padding-left: 0.9375rem;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0.9375rem;
+}
+
+.tag-filter {
+    color: #000000;
+    font: 400 1.125rem var(--ff-regular);
+    font-weight: bold;
+}
+
+.double-up {
+    font-size: 1.3125rem;
+    color: #000000;
+}
+
+.double-up-container {
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+
+.filter-icons i,
+.filter-labels .continent {
+    height: 1.875rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.6875rem;
+}
+
+.filter-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.filter-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.icon-text {
+    margin-left: 0.625rem;
+    font: 400 1rem var(--ff-regular);
+}
+
+/** blog-post.html css styling **/
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    max-width: 60rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2% 5% 2% 5%;
+    color: white;
+    background: rgba(28, 28, 27, 0.429);
+}
+
+.blog-post p {
+    max-width: 45rem;
+}
+
+.post-content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 225, 151);
+    text-shadow: 0px 1px 0px #000000;
+    width: 100%;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+    width: 95%;
+}
+
+.post-content p {
+    color: #ffffff;
+    font: 400 1.125rem/1.6 var(--ff-regular);
+    line-height: normal;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    max-width: 90%;
+}
+
+.h1-blogpost {
+    color: #FFF;
+    font-family: Finger Paint;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2%;
+    width: fit-content;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 2vh;
+    border: solid;
+    border-width: 0.0625rem;
+    border-color: #d48032a2;
+}
+
+.wp-block-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-post img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border: 0.0625rem solid #d48032a2;
+}
+
+#imageModal {
+    display: none;
+}
+
+/** media queries **/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .blog-post,
+    .mango-description,
+    .contact-form-section {
+        width: 80%;
+    }
+
+    .single-post {
+        flex: 0 0 calc(44% - 2%);
+    }
+
+    .post-title {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+
+/* Styles for smartphones */
+@media screen and (max-width: 767px) {
+
+    main {
+        margin-top: clamp(9rem, 6.8523rem + 10.7383vw, 12rem);
+    }
+
+    .mango-logo {
+        width: clamp(3rem, 1.5682rem + 7.1588vw, 5rem);
+        height: clamp(3rem, 1.5682rem + 7.1588vw, 5rem);
+    }
+
+    .mango-title {
+        width: clamp(10rem, 8.5682rem + 7.1588vw, 12rem);
+    }
+
+    .menu-toggle {
+        font-size: clamp(1.5rem, 0.4262rem + 5.3691vw, 3rem);
+    }
+
+    .blog-post img {
+        width: 80%;
+    }
+
+    .menu-item,
+    .menu-text {
+        color: white;
+        font-size: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+        text-align: center;
+    }
+
+    .text-content-about {
+        max-width: 95%;
+    }
+
+    .contact-h2,
+    .post-content h1,
+    .post-content h2,
+    .post-content h3,
+    .post-content h4 {
+        padding-bottom: 1%;
+    }
+
+    /**headings **/
+    .heading-bermuda,
+    .adventurer-title,
+    .contact-h2,
+    .post-content h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .previous-mango-quest-text {
+        font-size: clamp(0.9rem, 0.6054rem + 1.4732vw, 1.3125rem);
+    }
+
+    .mango-team-h1,
+    .about-h1,
+    .team-h2 {
+        font-size: clamp(1rem, 0.2841rem + 3.5794vw, 2rem);
+        margin-top: clamp(0.8rem, 0.4779rem + 1.6107vw, 1.25rem);
+        margin-bottom: clamp(0.8rem, 0.4779rem + 1.6107vw, 1.25rem);
+        margin-right: 0.2rem;
+        margin-left: 1rem;
+    }
+
+    .allposts-title {
+        font-size: clamp(1.5rem, 0.7857rem + 3.5714vw, 2.5rem);
+    }
+
+    .h1-blogpost {
+        font-size: clamp(1.2rem, 0.4857rem + 3.5714vw, 2.2rem);
+    }
+
+    /** regular text **/
+    .previous-mango-quest-text2,
+    .text-content-about,
+    .adventurer-bio,
+    .mango-description,
+    .form-label,
+    .post-title,
+    .post-content p,
+    .submit-button,
+    .load-more,
+    .see-all-link {
+        font-size: clamp(0.8rem, 0.5673rem + 1.1633vw, 1.125rem);
+    }
+
+    .copyright,
+    .follow-us-text {
+        font-size: clamp(0.8rem, 0.5679rem + 1.1607vw, 1.125rem);
+    }
+
+    .post-date {
+        font-size: clamp(0.7rem, 0.3964rem + 1.5179vw, 1.125rem);
+    }
+
+    .h2-index {
+        font-size: clamp(1rem, -0.0738rem + 5.3691vw, 2.5rem);
+        margin-bottom: 4%;
+    }
+
+    .description-styled {
+        font-size: clamp(1rem, 0.6421rem + 1.7897vw, 1.5rem);
+    }
+
+    .social-media {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow img {
+        max-width: 3rem;
+        max-height: 3rem;
+    }
+
+    .adventurer-section,
+    .about-section {
+        width: 95%;
+        padding: clamp(0.5rem, -0.5738rem + 5.3691vw, 2rem);
+        padding-top: 0;
+    }
+
+    .previous-mango-quest-text2 {
+        padding: 0 10% 10%;
+    }
+
+    .mango-description,
+    .adventurer-image,
+    .contact-form-section {
+        width: 95%;
+    }
+
+    .double-intro {
+        width: 85%;
+    }
+
+    .single-post {
+        flex: 0 0 calc(100% - 6%);
+        max-width: 90%;
+    }
+
+    .post-image {
+        max-height: 100%;
+        height: auto;
+    }
+
+    .carousel-arrows {
+        height: 3rem;
+        margin-top: 2%;
+    }
+
+    .heading-image {
+        border-width: 0.2rem 0.2rem 0 0.2rem;
+    }
+
+    .previous-adventure-image,
+    .heading-bermuda {
+        border-width: 0.2rem;
+    }
+
+    .button-load-more {
+        width: 50%;
+    }
+
+    .message-box {
+        height: clamp(10rem, 6.4206rem + 17.8971vw, 15rem);
+    }
+
+    .submit-button {
+        width: 40%;
+    }
+
+    .mango-quest-section {
+        gap: clamp(1rem, 0.2841rem + 3.5794vw, 2rem);
+        width: 95%;
+        padding: clamp(0.5rem, -0.5738rem + 5.3691vw, 2rem);
+        padding-top: 0;
+    }
+
+    .post-content p {
+        max-width: 95%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .adventures-button:hover {
+        transform: scale(1.05);
+        filter: brightness(1.05);
+        transition: 0.3s ease;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .heading-introduction {
+        transform: translateX(0%);
+
+    }
+
+
+
+    .footer-container {
+        display: block;
+    }
+
+    .main-mangoquest,
+    .adventurer-card {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .nav-group-left,
+    .nav-group-right {
+        display: none;
+    }
+
+    .footer-section {
+        padding-top: 2%;
+    }
+
+    .social-icons,
+    .follow-us-text,
+    .copyright {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+}
